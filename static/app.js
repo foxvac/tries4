@@ -1,6 +1,6 @@
 const appData = {
   autoRefresh: true,
-  refreshInterval: (1000 / 30),
+  refreshInterval: Math.floor(1000 / 30),
   gsTime: 0,
   me: [-1, -1, 0, 0],
   meGuid: -1,
@@ -679,15 +679,15 @@ const renderMap = () => {
     } else { // enemy
       if (playerObj.team) {
         label = `${playerObj.team}`
-      } // else if (playerObj.name) {
-        // label = playerObj.name
-//      } else {
- //       label = `<${playerObj.guid}>`
-//      }
-//    if (playerObj.kills) {
-//        label += `(${playerObj.kills})`
-//      }
-//    }
+      } else if (playerObj.name) {
+         label = playerObj.name
+      } else {
+       label = `<${playerObj.guid}>`
+      }
+    if (playerObj.kills) {
+       label += `(${playerObj.kills})`
+      }
+    }
     if (playerObj.health != null) {
       label += `@${Math.floor(playerObj.health)}`
     }
