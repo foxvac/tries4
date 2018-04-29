@@ -661,41 +661,9 @@ const renderMap = () => {
       // game direction 0 is facing east
       feature.set('_rotation', (loc[3] + 90) / 180 * Math.PI)
     }
-    let label = ''
-    if (playerObj.friend) {
-      if (!feature.get('_friend')) { // feature not set to friend yet
-        feature.set('_friend', true)
-      }
-      if (playerObj.name) {
-        label = playerObj.name.substring(0, 6) // make it shorter
-      }
-      // calculate the aim line, for 512 units (500m)
-      const radianAngle = loc[3] / 180 * Math.PI
-      feature.set('_lineGeo', new ol.geom.LineString(
-        [[loc[0], loc[1]],
-         [loc[0] + Math.cos(radianAngle) * 512, loc[1] - Math.sin(radianAngle) * 512]]
-        )
-      )
-    } else { // enemy
-       if (playerObj.team) {
-       label = ` `
-    } else if (playerObj.name) {
-        label = playerObj.name
-    } else {
-       label = ` `
-     }
-     if (playerObj.kills) {
-        label += ` `
-     }
-    }
-    if (playerObj.health != null) {
-//      label += `|血:${Math.floor(playerObj.health)}|`
-      label += ` `
-    }
-    feature.set('_label', label)
-    // re-add should be fine
-    playerSource.addFeature(feature)
-  }
+    
+    
+    
   // (2) get all the features in the layer, if they are not in showingPlayers, remove them
   for (const renderingFeature of playerSource.getFeatures()) {
     const featureId = renderingFeature.getId()
