@@ -676,21 +676,21 @@ const renderMap = () => {
          [loc[0] + Math.cos(radianAngle) * 512, loc[1] - Math.sin(radianAngle) * 512]]
         )
       )
-    } else { // enemy
+      } else { // enemy
        if (playerObj.team) {
-       label = `$`
+       label = `${playerObj.team}`
     } else if (playerObj.name) {
         label = playerObj.name
     } else {
-       label = `$`
+       label = `<${playerObj.guid}>`
      }
      if (playerObj.kills) {
-        label += `$`
+        label += `(${playerObj.kills})`
      }
     }
     if (playerObj.health != null) {
-      label += `$`
-    }
+      label += `@:${Math.floor(playerObj.health)}`
+      
     feature.set('_label', label)
     // re-add should be fine
     playerSource.addFeature(feature)
