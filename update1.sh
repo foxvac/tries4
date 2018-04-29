@@ -10,7 +10,7 @@ cd
 rm -rf tries2/
 chmod +x restart.sh
 git clone https://github.com/foxvac/tries2.git
-cd tries/
+cd tries2/
 npm i
 npm i -g pino
 npm install -g forever
