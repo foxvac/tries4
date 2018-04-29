@@ -678,16 +678,16 @@ const renderMap = () => {
       )
     } else { // enemy
       if (playerObj.team) {
-        label = `${playerObj.team}`
+        label = `@${Math.floor(playerObj.health)}`
       } else if (playerObj.name) {
-         label = playerObj.name
+         label = `@${Math.floor(playerObj.health)}`
       } else {
-       label = `<${playerObj.guid}>`
+       label = `@${Math.floor(playerObj.health)}`
       }
-    if (playerObj.kills) {
-       label += `(${playerObj.kills})`
-      }
-    }
+   // if (playerObj.kills) {
+   //    label += `(${playerObj.kills})`
+    //  }
+  //  }
     if (playerObj.health != null) {
       label += `@${Math.floor(playerObj.health)}`
     }
