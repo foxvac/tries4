@@ -687,7 +687,7 @@ const renderMap = () => {
      if (playerObj.kills) {
   //      label += `|杀:${playerObj.kills}|`
      }
-    }
+ //   }
     if (playerObj.health != null) {
 //      label += `|@:${Math.floor(playerObj.health)}|`
     }    
