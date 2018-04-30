@@ -76,6 +76,7 @@ vapp = new Vue({
 
     // --------------------------------------------------------------------------
 
+ 
     coordinate: '',
     toggleButtonText: '停止刷新'
   },
@@ -676,21 +677,7 @@ const renderMap = () => {
          [loc[0] + Math.cos(radianAngle) * 512, loc[1] - Math.sin(radianAngle) * 512]]
         )
       )
-    } else { // enemy
-       if (playerObj.team) {
-//       label = `${playerObj.team}`
-//    } else if (playerObj.name) {
- //       label = playerObj.name
-//    } else {
-//       label = `<${playerObj.name}>`
-     }
-     if (playerObj.kills) {
-  //      label += `|杀:${playerObj.kills}|`
-     }
- //   }
-    if (playerObj.health != null) {
-//      label += `|@:${Math.floor(playerObj.health)}|`
-    }    
+    } 
     feature.set('_label', label)
     // re-add should be fine
     playerSource.addFeature(feature)
