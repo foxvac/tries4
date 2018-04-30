@@ -787,9 +787,9 @@ const updatePlayerLocs = () => {
   if (!vapp.showBox) {
     query += 'noBox=true&'
   }
-  if (!vapp.showCar) {
-    query += 'noCar=true&'
-  }
+ // if (!vapp.showCar) {
+ //   query += 'noCar=true&'
+//  }
   if (!vapp.showAirDrop) {
     query += 'noAirdrop=true&'
   }
