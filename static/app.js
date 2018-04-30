@@ -338,9 +338,9 @@ const apawnStyleFunc = function (feature) {
     case 'CAR':
       const carLabel = this.get('_label') || ''
       if (carLabel == '') {
-  //      apawnImg = carSvgImg
-   //   } else {
-  //      apawnImg = carRedSvgImg
+      apawnImg = carSvgImg
+      } else {
+       apawnImg = carRedSvgImg
       }
       break
     default:
