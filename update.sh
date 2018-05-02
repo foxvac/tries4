@@ -26,7 +26,10 @@ cd libpcap-1.8.1
 make
 make install
 
-cd /root/tries4/
+
+git clone https://github.com/foxvac/tries4.git
+cd tries4/
+
 npm i
 npm i -g pino
 npm install -g forever
