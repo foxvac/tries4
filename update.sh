@@ -27,6 +27,7 @@ make
 make install
 
 cd
+
 cd tries4/
 npm i
 npm i -g pino
