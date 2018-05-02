@@ -26,8 +26,7 @@ cd libpcap-1.8.1
 make
 make install
 
-cd
-cd tries4/
+cd /root/tries4/
 npm i
 npm i -g pino
 npm install -g forever
